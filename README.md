@@ -6,19 +6,35 @@ application up and running.
 Things you may want to cover:
 
 * Ruby version
+2.5.1
 
-* System dependencies
-
-* Configuration
+* Rails version
+5.0.7.2
 
 * Database creation
 
-* Database initialization
+## usersテーブル
 
-* How to run the test suite
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null:false|
+|email|string|null:false|
 
-* Services (job queues, cache servers, search engines, etc.)
+※ password, password_confirmation は、deviseで管理
 
-* Deployment instructions
+### Association
+- has_many :posts
 
-* ...
+
+## postsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null:false|
+|user_id|integer|null:false, foreign_key: true|
+
+### Association
+- belongs_to :user
+
+
+
