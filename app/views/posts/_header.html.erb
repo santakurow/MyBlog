@@ -6,6 +6,7 @@
         <a href="/" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down">
             <% if user_signed_in? %>
+              <li class="user-name">ようこそ、<%= current_user.name %>さん</li>
               <li><a href="/posts/new">投稿</a></li>
               <li><%= link_to "ログアウト",  destroy_user_session_path, method: :delete %></li>
             <% else %>

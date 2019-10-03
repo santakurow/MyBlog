@@ -22,12 +22,12 @@
    font-size: 40px;
  }
 
- .center:active {
-   
- }
-
  .center-block {
    margin-top: 20px;
+ }
+
+ .user-name {
+   margin-right: 20px;
  }
 
 .btn-submit {
