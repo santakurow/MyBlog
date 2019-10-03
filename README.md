@@ -17,8 +17,8 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null:false, add_index, unique:true|
-|email|string|null:false|
+|name|string|null:false, add_index|
+|email|string|null:false, unique: true|
 
 ※ password, password_confirmation は、deviseで管理
 
