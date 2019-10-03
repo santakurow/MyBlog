@@ -15,12 +15,13 @@ Things you may want to cover:
 
 ## usersテーブル
 
+※ deviseで管理
+
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null:false, add_index|
-|email|string|null:false, unique: true|
-
-※ password, password_confirmation は、deviseで管理
+|name|string|null:false|
+|email|string|null:false|
+|encrypted_password|string|null: false|
 
 ### Association
 - has_many :posts
