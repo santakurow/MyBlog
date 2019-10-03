@@ -1,0 +1,29 @@
+<h3 class="center-align">
+  編集
+</h3>
+<div class="container">
+  <div class="row">
+    <%= form_for @post do |f| %>
+      <% if @post.errors.any? %>
+        <div id="error_explanation" class="alert alert-danger">
+          <ul>
+            <% @post.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+      <div class="col s6">
+        <div class="field edit-field">
+          <%= f.text_area :text, class: "materialize-textarea", value: "#{@post.text}" %>
+          <%= f.label :text, "記事を編集してください" %>
+        </div>
+      </div>
+      <div class="col s6 center-align center-block">
+        <div class="btn-submit">
+          <%= button_tag "編集", class: "btn-large waves-effect waves-light", type: "button", onclick: "submit();" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
